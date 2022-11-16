@@ -43,6 +43,7 @@ list(TRANSFORM bin_sources PREPEND ${PROJECT_SOURCE_DIR}/)
 #
 # Defining targets section
 #
+set(CMAKE_DEBUG_POSTFIX d)
 
 if (WIN32)
   set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
