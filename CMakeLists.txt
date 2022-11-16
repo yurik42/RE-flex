@@ -44,6 +44,10 @@ list(TRANSFORM bin_sources PREPEND ${PROJECT_SOURCE_DIR}/)
 # Defining targets section
 #
 
+if (WIN32)
+  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+endif(WIN32)
+
 add_library(ReflexLib SHARED "")
 target_sources(ReflexLib PRIVATE ${lib_sources})
 target_include_directories(ReflexLib PUBLIC
